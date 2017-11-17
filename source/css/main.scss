@@ -1,9 +1,15 @@
-*{
-  padding: 0 3%;
-
+.container_require {
+	display: grid;
+	grid-template-rows: 50px 100px;
 
 }
-html{
-  background-color: rgb(218, 160, 131);
+
+.h2__require {
+	grid-template-columns: 1fr;
 }
-@import "src/hero.scss";
+p {
+	margin: 0;
+}
+.cont_options {
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
