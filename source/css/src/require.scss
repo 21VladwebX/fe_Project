@@ -1,0 +1,38 @@
+.grid {
+	display:  grid;
+}
+.require {
+	h2 {
+		text-align:  center;
+		color: #22425b;
+		font-family: "robotobold", arial, sans-serif;
+		font-size: 36px;
+		text-transform: uppercase;
+	}
+}
+.cont_options {
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-gap: 50px;
+	position: relative;
+	align-content: center;
+	text-align: center;
+}
+.require__bank_card,
+.require__age_restriction,
+.require__passport,
+.require__telefon
+ {
+	align-content: center;
+	img {
+		padding: 20px;
+		width: 213px;
+		height: 150px;
+	}
+}
+
+.require span {
+	color: #22425b;
+	font-family: "robotobold", arial, sans-serif;
+	font-size: 24px;
+	text-align: center;
+}

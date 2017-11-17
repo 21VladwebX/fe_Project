@@ -64,7 +64,7 @@ const gulp = require('gulp');
 
 	/* ------------ Copy images ------------- */
 	gulp.task('copy:images', function() {
-	return gulp.src('./source/images/**/*.*')
+	return gulp.src('./source/css/images/**/*.*')
 	.pipe(gulp.dest('build/images'));
 	});
 

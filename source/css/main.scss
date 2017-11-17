@@ -1,15 +1,1 @@
-.container_require {
-	display: grid;
-	grid-template-rows: 50px 100px;
-
-}
-
-.h2__require {
-	grid-template-columns: 1fr;
-}
-p {
-	margin: 0;
-}
-.cont_options {
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-}
+@import "src/require.scss"
