@@ -1,7 +1,6 @@
-.grid {
-	display:  grid;
-}
+
 .require {
+	justify-content: center;
 	h2 {
 		text-align:  center;
 		color: #22425b;
@@ -12,27 +11,46 @@
 }
 .cont_options {
 	grid-template-columns: 1fr 1fr 1fr 1fr;
-	grid-gap: 50px;
+	grid-gap: 30px;
 	position: relative;
 	align-content: center;
 	text-align: center;
+	justify-content: space-evenly;
+	max-width: 1280px;
 }
 .require__bank_card,
-.require__age_restriction,
-.require__passport,
-.require__telefon
- {
+.require__passport {
 	align-content: center;
 	img {
-		padding: 20px;
-		width: 213px;
-		height: 150px;
+		display: block;
+		margin: 0 auto;
+		height: auto;
+		padding: 0 15px;
+		max-width: 100%;
+		max-height: 150px;
 	}
 }
-
+.require__age_restriction,
+.require__telefon {
+	align-content: center;
+	img {
+		margin: 0 auto;
+		height: auto;
+		display: block;
+		padding: 0 15px;
+		max-width: 100%;
+		max-height: 150px;
+	}
+}
 .require span {
 	color: #22425b;
 	font-family: "robotobold", arial, sans-serif;
 	font-size: 24px;
+	font-weight: bold;
+	line-height: 1.25;
 	text-align: center;
+	padding-bottom: 20px;
+	padding-top: 45px;
+	display: block;
 }
+@import "src/footer.scss"
