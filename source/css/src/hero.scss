@@ -4,7 +4,7 @@
   text-decoration: none;
   padding: 0;
   width: 100%;
-  height: 500px;
+  height: 400px;
   background-image: url(https://moneyveo.ua/ImageBrowser/Image/?path=background%2Fbg-autumn2.jpg);
 
   &__onlineHelp{
@@ -44,9 +44,9 @@
 
 
   &__header-title{
-    padding-top: 20px;
+    // padding-top: 20px;
     text-align: center;
-    font-size: 1.5em;
+    font-size: 1.6em;
     text-transform: uppercase;
     color: rgb(255, 255, 255);
   }
@@ -54,12 +54,18 @@
   &__left{
     left:0;
   }
+  &__sect{
+    width: 90%;
+    height: 300px;
+    margin: 1% 5% 0 5%;
+    text-align: center;
 
+  }
   &__headerMain{
-    width: 74%;
+    width: 96.3%;
     // padding: 2%;
-    margin-top: 20px;
-    margin-left: 10%;
+    // margin-top: 20px;
+    // margin-left: 10%;
     background-color: white;
     display: grid;
     grid-template-rows: 1fr;
@@ -70,25 +76,23 @@
         margin-right: -42px;
         padding: 0;
         float: right;
-        height: 140px;
+        height: 130px;
       }
     }
   }
 
   &__title{
-
-    // padding: 2%;
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 50px 50px;
     grid-template-columns: 1fr ;
-    grid-row-gap: 13px;
     font-weight: bold;
-    height: 120px;
+    padding-top: 15px;
+    // height: 120px;
     // background-color: rgb(163, 249, 32);
-
+    font-size: 1.4em;
     &-upper{
-      margin-top: 40%;
-      color:rgb(14, 39, 59);
+      margin-top: 20%;
+      color:rgb(3, 47, 98);
       // background-color: rgb(163, 249, 32);
     }
 
@@ -107,39 +111,42 @@
   }
 
   &__main{
-    width: 80%;
+    width: 100%;
     padding: 0;
-    height: 291px;
+    height: 230px;
     // left: -10%;
     display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 5fr 2fr;
+    grid-template-rows: 1fr ;
+    grid-template-columns: 5fr 3fr;
     background-color:rgba(33, 133, 3, 0.7);
-    margin: 0  0 0 10%;
+
   }
 
   &__form{
-    margin-top: 30px;
-    padding: 4%;
-    div.form__main{
+    // margin-top: 20px;
+    padding: 0;
+    padding-top: 5%;
+    width: 100%;
+    height: 230px;
+    // height: 100%;
 
+    div.form__main{
       display: grid;
-      grid-template-rows: 1fr ;
-      grid-template-columns: 400px 150px;
-      grid-column-gap: 5%;
+      grid-template-rows: 130px  ;
+      grid-template-columns: 600px 150px ;
+      grid-column-gap: 0;
+      padding:0;
 
       &-2{
-        // left: 20%  ;
-        // margin-left: -50%;
-        // border: 2px solid red;
+
+        padding-top: 10px;
         display: grid;
-        grid-template-columns: 10px ;
+        grid-template-columns: 100px ;
         grid-template-rows: 1fr ;
 
 
         &1, &2{
-          align-self: center;
-          padding: 0 10% 0 0%;
+
           display: grid;
           grid-template-rows: 1fr 1fr;
           grid-template-columns: 50px 50px;
@@ -149,20 +156,18 @@
           input{
             // align-self: center;
             /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
-            // margin-top: -12%;
-            /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
             border-radius: 2px;
             border: 1px solid white;
             background-color: rgba(14, 34, 8, 0.3);
             transition: border 0.4s;
-            width: 50px;
-            height: 25px;
+            width: 40px;
+            height: 20px;
             padding: 10%;
             color: white;
 
             &:hover{
               border: 1px solid rgb(0, 87, 255);
-
             }
           }
 
@@ -170,24 +175,64 @@
 
       }
       &-1{
-        padding: 0;
+        padding-top: 20px;
         // border: 2px solid red;
         display: grid;
-        grid-template-columns: 400px ;
+        grid-template-columns: 600px ;
         grid-template-rows: 1fr 1fr;
 
         &1, &2{
           // padding: 0 10% 0 0%;
           display: grid;
           grid-template-rows: 1fr;
-          grid-template-columns: 100px 100px;
+          grid-template-columns: 100px 400px;
           // padding-left: -200%;
 
           .hero_main-sumT, .hero_main-sum {
+            .form-slide{
+              position:absolute;
+              left: 157px;
+              top: -30px;
+              width: 30px;
+              height: 20px;
+              background-color: rgb(213, 211, 21);
+              font-size: .7em;
+              z-index: 30;
+              // border-bottom: 1px solid black;
+              // opacity: 0;
+
+              &:after{
+                content: '';
+                position: absolute;
+                left: 30px;
+                top: 0px;
+                display: block;
+                height: 20px;
+                width: 0px;
+                border-top: 20px solid rgb(213, 211, 21);
+                border-right: 13px solid transparent;
+                z-index: 1;
+              }
+
+              &:before{
+                content: ' ';
+                display: block;
+                position: absolute;
+                top: 20px;
+                left: 0px;
+                width: 0;
+              	height: 0px;
+              	border-top: 15px solid rgb(213, 211, 21);
+              	border-left: 14px solid transparent;
+                z-index: 2;
+                // border-right: 10px solid rgb(213, 211, 21);
+                // border-bottom: 1px solid transparent;
+              }
+            }
             input{
               position: relative;
               height: 15px;
-              width: 250px;
+              width: 400px;
             }
             position: relative;
             height: 15px;
@@ -205,13 +250,13 @@
             font-size: 1.4em;
             width: 10px;
             height: 20px;
-            padding-top: -120px;
+            padding-top: -20%;
           }
 
           .hero_main-sumT:after , .hero_main-sum:after {
             content: '+';
             position: absolute;
-            left: 90%;
+            left: 137%;
             top: -15%;
             border: 2px solid white;
 
@@ -225,58 +270,91 @@
     }
 
   .form-btn{
-    margin-top: 4%;
-    margin-left: 4%;
+    margin-right: 8%;
+    // margin-bottom: 335px;
+    margin-top: 10px;
     text-transform: uppercase;
     background-color: rgb(217, 197, 17);
-    width: 190px;
-    height: 30px;
+    color: black;
+    font-weight: bold;
+    width: 200px;
+    height: 50px;
     font-size: .8em;
     border-radius: 5px;
-    border: none;
+    // border: none;
+    border: 2px solid rgb(200, 190, 15);
     transition: all 0.4s;
-    &:hover{
 
+    &:hover{
       cursor: pointer;
       color: white;
       background-color: rgb(10, 159, 66);
+      border: 2px solid rgb(10, 159, 66);
     }
   }
 
   }
 
+  &__promo{
+    margin-left: 10px;
+    margin-bottom: 25px;
+    margin-right: 25px;
+    text-decoration: none;
+    font-size: .8em;
+    color: white;
+    border-bottom: 2px dotted white;
+    transition: all 0.4s;
+
+    &:hover{
+      color: rgb(10, 159, 66);
+      border-bottom: 2px dotted rgb(10, 159, 66);
+    }
+  }
+
   &__right{
     color: white;
-    margin-top: 10px;
-    padding-top: 6%;
+    // margin-top: 10px;
+    padding: 0;
+    padding-top: 7%;
+    text-align: left;
+    span{
+      font-weight: bold;
+    }
   }
 
   &__res{
-    margin-top: 20px;
+    width: 90%;
+    margin-top: 10px;
     color: rgb(10, 56, 80);
     display: grid;
     grid-template-rows: repeat(4, 1fr);
     grid-template-columns: 1fr;
     font-size: .7em;
-    width: 200px;
+
 
     &-date, &-cred, &-proc, &-result{
       display: grid;
       grid-template-rows: 1fr;
       grid-template-columns: 1fr 1fr;
+      text-align: left;
+      padding: 0 5% 0 5%;
 
     .res-resCred, .res-resProc, .res-resRes{
         text-align: right;
       }
+      .res-resRes{
+        font-size: 1.2em;
+      }
     }
-    &-date{
 
+    &-date{
       background-color: rgb(124, 153, 255);
 
     }
 
     &-cred{
       font-weight: bold;
+      border-bottom: 1px dotted rgb(203, 203, 203);
       background-color: rgb(255, 255, 255);
 
     }
@@ -292,6 +370,4 @@
       background-color: rgb(14, 51, 92);
     }
   }
-
-
 }

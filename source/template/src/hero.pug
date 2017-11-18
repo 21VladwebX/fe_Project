@@ -1,58 +1,64 @@
 .hero
   
-  a.hero__onlineHelp(href="#")
-    img.hero__onlineHelp-img(src="http://www.iconarchive.com/download/i75883/martz90/circle/messages.ico")
-    span.hero__onlineHelp-text Оставить  соoбщение
+  //- a.hero__onlineHelp(href="#")
+  //-   img.hero__onlineHelp-img(src="http://www.iconarchive.com/download/i75883/martz90/circle/messages.ico")
+  //-   span.hero__onlineHelp-text Оставить  соoбщение
     
   section.hero
     .hero__header-title.
       moneyveo - мгновенныe  кредит онлайн
-    .hero__headerMain
-      .hero__title
-        span.hero__title-upper.
-          Получите до 15000 грн на свою карту
-        span.hero__title-lower.
-          Первый кредит - до 3500грн под 0,01%
-      .hero-img
-        img(src="https://moneyveo.ua/ImageBrowser/Image/?path=Enot-01.png")
-    .hero__main
-        .hero__left
-          form.hero__form
-            div.form__main
-              div.form__main-1
-                div.form__main-11
-                  label(for="sum") Сумма:
-                  .hero_main-sum
-                    input(type="range" min="50" max="3500" name="sum")
+    .hero__sect
+      .hero__headerMain
+        .hero__title
+          span.hero__title-upper.
+            Получите до 15000 грн на свою карту
+          span.hero__title-lower.
+            Первый кредит - до 3500грн под 0,01%
+        .hero-img
+          img(src="https://moneyveo.ua/ImageBrowser/Image/?path=Enot-01.png")
+      .hero__main
+          .hero__left
+            form.hero__form
+              div.form__main
+                div.form__main-1
+                  div.form__main-11
+                    label(for="sum") Сумма:
+                    .hero_main-sum
+                      .form-slide.
+                        1000
+                      input(type="range" min="50" max="3500" name="sum")
 
-                div.form__main-12
-                  label(for="sumT") Срок:
-                  .hero_main-sumT
-                    input(type="range" min="50" max="3500" name="sumT")
-                  
-              div.form__main-2
-                div.form__main-21
-                  input.hero_main-date(type="date" name="date")
-                  label(for="date") грн
-                  
-                div.form__main-22
-                  input.hero_main-sumC(type="date" name="calendar")
-                  //- input(type="date" name="calendar" value="2012-06-01" max="2012-06-04" min="2012-05-29")
-                  label(for="calendar") дней
-            button.form-btn получить кредит
-            a(href="#") У меня есть промокод
-        .hero__right
-          span.hero__right Ваш кредит:
-          .hero__res
-            .hero__res-date
-              p date: 
-              //- p.res-resDate d
-            .hero__res-cred
-              p Кредит:
-              p.res-resCred c
-            .hero__res-proc
-              p Проценты:
-              p.res-resProc p
-            .hero__res-result
-              p Всего:
-              p.res-resRes r
+                  div.form__main-12
+                    label(for="sumT") Срок:
+                    .hero_main-sumT
+                      .form-slide.
+                        1000
+                      input(type="range" min="50" max="3500" name="sumT")
+                    
+                div.form__main-2
+                  div.form__main-21
+                    input.hero_main-date(type="text" value="1000" name="gtb")
+                    label(for="grn") грн
+                    
+                  div.form__main-22
+                    input.hero_main-sumC(type="text" value="9" name="calendar")
+                    //- img.form-calendar(href="https://cdn4.iconfinder.com/data/icons/111-seo-services-pack/128/new_seo-39-512.png")
+                    //- input(type="date" name="calendar" value="2012-06-01" max="2012-06-04" min="2012-05-29")
+                    label(for="calendar") дней
+              button.form-btn получить кредит
+              a.hero__promo(href="#") У меня есть промокод
+          .hero__right
+            span.hero__right Ваш кредит:
+            .hero__res
+              .hero__res-date
+                p date: 
+                //- p.res-resDate d
+              .hero__res-cred
+                p Кредит:
+                p.res-resCred c
+              .hero__res-proc
+                p Проценты:
+                p.res-resProc p
+              .hero__res-result
+                p Всего:
+                p.res-resRes r
