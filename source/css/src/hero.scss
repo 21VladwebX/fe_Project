@@ -4,7 +4,7 @@
   text-decoration: none;
   padding: 0;
   width: 100%;
-  height: 400px;
+  height: 450px;
   background-image: url(https://moneyveo.ua/ImageBrowser/Image/?path=background%2Fbg-autumn2.jpg);
 
   &__onlineHelp{
@@ -62,7 +62,7 @@
 
   }
   &__headerMain{
-    width: 96.3%;
+    width: 100%;
     // padding: 2%;
     // margin-top: 20px;
     // margin-left: 10%;
@@ -73,10 +73,8 @@
 
     .hero-img{
       img{
-        margin-right: -42px;
-        padding: 0;
         float: right;
-        height: 130px;
+        height: 150px;
       }
     }
   }
@@ -86,19 +84,17 @@
     grid-template-rows: 50px 50px;
     grid-template-columns: 1fr ;
     font-weight: bold;
-    padding-top: 15px;
-    // height: 120px;
-    // background-color: rgb(163, 249, 32);
-    font-size: 1.4em;
+    font-size: 1.6em;
+    text-align: left;
+    margin-top: 10%;
+    padding-left: 10%;
     &-upper{
       margin-top: 20%;
       color:rgb(3, 47, 98);
-      // background-color: rgb(163, 249, 32);
     }
 
     &-lower{
       color: rgb(44, 134, 13);
-      // background-color: rgb(163, 249, 32);
     }
 
     .hero-img{
@@ -113,29 +109,29 @@
   &__main{
     width: 100%;
     padding: 0;
-    height: 230px;
-    // left: -10%;
+    height: 250px;
     display: grid;
     grid-template-rows: 1fr ;
     grid-template-columns: 5fr 3fr;
+    grid-column-gap: 20px;
     background-color:rgba(33, 133, 3, 0.7);
 
   }
 
   &__form{
     // margin-top: 20px;
-    padding: 0;
-    padding-top: 5%;
+    padding: 5% 0 0 2%;
     width: 100%;
-    height: 230px;
+    // height: 230px;
     // height: 100%;
+    color: white;
 
     div.form__main{
       display: grid;
-      grid-template-rows: 130px  ;
-      grid-template-columns: 600px 150px ;
-      grid-column-gap: 0;
-      padding:0;
+      grid-template-rows: 120px  ;
+      grid-template-columns: 570px 150px ;
+      // grid-column-gap: 0;
+      padding:0 0 0 4%;
 
       &-2{
 
@@ -156,18 +152,20 @@
           input{
             // align-self: center;
             /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
-
+            margin: -5px 0 0 -10px;
             border-radius: 2px;
-            border: 1px solid white;
+            border: 2px solid white;
             background-color: rgba(14, 34, 8, 0.3);
-            transition: border 0.4s;
-            width: 40px;
-            height: 20px;
-            padding: 10%;
+            transition: border 0.6s;
+            width: 55px;
+            height: 35px;
+            padding-left: 20%;
+            font-size: 1.3em;
             color: white;
 
             &:hover{
-              border: 1px solid rgb(0, 87, 255);
+              box-shadow: 0 1px 1px rgb(17, 30, 119);
+              border: 2px solid rgb(17, 30, 119);
             }
           }
 
@@ -178,33 +176,42 @@
         padding-top: 20px;
         // border: 2px solid red;
         display: grid;
-        grid-template-columns: 600px ;
+        grid-template-columns: 550px ;
         grid-template-rows: 1fr 1fr;
-
+        grid-row-gap: 25px;
+        font-weight: bold;
+        font-size: 1.3em;
+        letter-spacing: -2px;
         &1, &2{
-          // padding: 0 10% 0 0%;
           display: grid;
           grid-template-rows: 1fr;
           grid-template-columns: 100px 400px;
-          // padding-left: -200%;
 
           .hero_main-sumT, .hero_main-sum {
+            position: relative;
+            height: 15px;
+            width: 290px;
             .form-slide{
+              letter-spacing: 0;
               position:absolute;
+              text-align: center;
+              // padding-top: 2px;
               left: 157px;
               top: -30px;
-              width: 30px;
+              width: 32px;
               height: 20px;
               background-color: rgb(213, 211, 21);
-              font-size: .7em;
+              font-size: .6em;
+              font-weight: bold;
               z-index: 30;
+              color: black;
               // border-bottom: 1px solid black;
               // opacity: 0;
 
               &:after{
                 content: '';
                 position: absolute;
-                left: 30px;
+                left: 32px;
                 top: 0px;
                 display: block;
                 height: 20px;
@@ -234,30 +241,28 @@
               height: 15px;
               width: 400px;
             }
-            position: relative;
-            height: 15px;
-            width: 300px;
           }
 
           .hero_main-sumT:before , .hero_main-sum:before {
             content: '-';
+            // font-size: .3em;
             position: absolute;
-            left: 0px;
-            top: -20%;
+            left: -5px;
+            top: -50%;
             text-align: center;
             border: 2px solid white;
             text-align: center;
             font-size: 1.4em;
             width: 10px;
             height: 20px;
-            padding-top: -20%;
+            padding-bottom: 3%;
           }
 
           .hero_main-sumT:after , .hero_main-sum:after {
             content: '+';
             position: absolute;
-            left: 137%;
-            top: -15%;
+            left: 141.5%;
+            top: -32%;
             border: 2px solid white;
 
           }
@@ -270,8 +275,9 @@
     }
 
   .form-btn{
-    margin-right: 8%;
-    // margin-bottom: 335px;
+    margin-left: -5%;
+    margin-right: 2%;
+    margin-bottom: 15%;
     margin-top: 10px;
     text-transform: uppercase;
     background-color: rgb(217, 197, 17);
@@ -279,9 +285,7 @@
     font-weight: bold;
     width: 200px;
     height: 50px;
-    font-size: .8em;
     border-radius: 5px;
-    // border: none;
     border: 2px solid rgb(200, 190, 15);
     transition: all 0.4s;
 
@@ -317,37 +321,54 @@
     padding: 0;
     padding-top: 7%;
     text-align: left;
+
     span{
       font-weight: bold;
+      font-size: 1.4em;
     }
   }
 
   &__res{
     width: 90%;
-    margin-top: 10px;
+    margin-top: 20px;
     color: rgb(10, 56, 80);
     display: grid;
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 40px);
     grid-template-columns: 1fr;
     font-size: .7em;
 
 
     &-date, &-cred, &-proc, &-result{
       display: grid;
+
       grid-template-rows: 1fr;
       grid-template-columns: 1fr 1fr;
       text-align: left;
       padding: 0 5% 0 5%;
 
+    span{
+      padding-top: 10px;
+    }
+
     .res-resCred, .res-resProc, .res-resRes{
+        padding: 0;
         text-align: right;
       }
       .res-resRes{
-        font-size: 1.2em;
+        margin-top: 10px;
+        font-size: 1.3em;
       }
+    }
+    &-result{
+      font-weight: lighter;
+      font-size: 1em;
     }
 
     &-date{
+      span{
+        font-weight: lighter;
+      }
+
       background-color: rgb(124, 153, 255);
 
     }
