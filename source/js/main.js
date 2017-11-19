@@ -1,4 +1,10 @@
 "use strict"
-window.onload = function(){
-  alert("Hello world");
-}
+$(document).ready(function(){
+
+  alert('1231');
+
+
+
+
+
+})
