@@ -196,7 +196,7 @@
               position:absolute;
               text-align: center;
               // padding-top: 2px;
-              left: 157px;
+              left: 200px;
               top: -30px;
               width: 32px;
               height: 20px;
@@ -246,6 +246,7 @@
           .hero_main-sumT:before , .hero_main-sum:before {
             content: '-';
             // font-size: .3em;
+            display: block;
             position: absolute;
             left: -5px;
             top: -50%;
@@ -256,14 +257,18 @@
             width: 10px;
             height: 20px;
             padding-bottom: 3%;
+            cursor: pointer;
+
           }
 
           .hero_main-sumT:after , .hero_main-sum:after {
             content: '+';
+            display: block;
             position: absolute;
             left: 141.5%;
             top: -32%;
             border: 2px solid white;
+            cursor: pointer;
 
           }
 

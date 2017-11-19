@@ -46,12 +46,29 @@ $(document).ready(function(){
     // console.log(res);
     $('.res-resRes').text(res);
   }
+
+  function slide (value,who){
+    if(who =="sum"){
+      // let value = 1800;
+      let width = 9;
+      let res = value/width;
+      // console.log(res + " RES");
+      $('.slider-sumT').css({"left": res + "px"});
+    }else if(who =="date"){
+      let width = 12.7;
+      let res = value*width;
+      // console.log(res + " RES");
+      $('.slider-date').css({"left": res + "px"});
+    }
+
+  }
   $('.hero_main-sum > input').on('change',function(){
     let value = $(this).val();
     $('.hero_main-sumC').val(value);
     $('.slider-sumT').text(value);
     $('.res-resCred').text(value);
     // console.log($(this).val());
+    slide(value,'sum');
     res();
   });
 
@@ -116,6 +133,7 @@ $(document).ready(function(){
     let proc = (value/10).toFixed(2);
     $('.slider-date').text(value);
     $('.res-resProc').text(proc);
+    slide(value,'date');
     res();
     // console.log(proc);
   });
