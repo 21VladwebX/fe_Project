@@ -62,12 +62,12 @@ $(document).ready(function(){
     }
 
   }
+
   $('.hero_main-sum > input').on('change',function(){
     let value = $(this).val();
     $('.hero_main-sumC').val(value);
     $('.slider-sumT').text(value);
     $('.res-resCred').text(value);
-    // console.log($(this).val());
     slide(value,'sum');
     res();
   });
@@ -75,8 +75,6 @@ $(document).ready(function(){
   $('.hero_main-sumC').on('change',function(){
 
     var value = Number($(this).val());
-    // console.log(value);
-    // console.log(typeof(value));
     if(value >= 3500){
       value = 3500;
       $('.hero_main-sumC').val(value);
@@ -138,14 +136,69 @@ $(document).ready(function(){
     // console.log(proc);
   });
 
-  // $('.hero_main-sum::after').on('click',function(){
-  //   var val = $('.hero_main-sumT ').val();
-  //   console.log(val);
-  //   $('.hero_main-sumT ').val(val--);
-  //   // res();
-  //   // console.log(proc);
-  // });
+  $('.hero_main-sum-before').on('click',function(){
+    var val = parseInt($('.hero_main-sum > input ').val());
+    console.log(val);
+    console.log(typeof(val));
+    val = val - 50;
+    console.log('New value' + val);
+    $('.hero_main-sum > input ').val(val);
 
+    $('.hero_main-sumC  ').val(val);
+    $('.slider-sumT').text(val);
+    $('.res-resCred').text(val);
+    res();
+    // console.log($(this).val());
+    slide(val,'sum');
+  });
+
+  $('.hero_main-sum-after').on('click',function(){
+    var val = parseInt($('.hero_main-sum > input ').val());
+    console.log(val);
+    console.log(typeof(val));
+    val = val + 50;
+    console.log('New value' + val);
+    $('.hero_main-sum > input ').val(val);
+
+    $('.hero_main-sumC  ').val(val);
+    $('.slider-sumT').text(val);
+    $('.res-resCred').text(val);
+    res();
+    // console.log($(this).val());
+    slide(val,'sum');
+  });
+
+  $('.hero_main-sumT-before').on('click',function(){
+    var val = parseInt($('.hero_main-sumT > input ').val());
+    console.log(val);
+    console.log(typeof(val));
+    val--;
+    console.log('New value' + val);
+    $('.hero_main-sumT > input ').val(val);
+
+    $('.hero_main-date ').val(val);
+    $('.slider-date').text(val);
+    $('.res-resCred').text(val);
+    res();
+    // console.log($(this).val());
+    slide(val,'date');
+  });
+
+  $('.hero_main-sumT-after').on('click',function(){
+    var val = parseInt($('.hero_main-sumT > input ').val());
+    console.log(val);
+    console.log(typeof(val));
+    val++;
+    console.log('New value' + val);
+    $('.hero_main-sumT > input ').val(val);
+
+    $('.hero_main-date  ').val(val);
+    $('.slider-date').text(val);
+    $('.res-resCred').text(val);
+    res();
+    // console.log($(this).val());
+    slide(val,'date');
+  });
 
 
 

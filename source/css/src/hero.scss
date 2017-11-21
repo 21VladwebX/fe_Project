@@ -119,19 +119,16 @@
   }
 
   &__form{
-    // margin-top: 20px;
     padding: 5% 0 0 2%;
     width: 100%;
-    // height: 230px;
-    // height: 100%;
     color: white;
 
     div.form__main{
       display: grid;
       grid-template-rows: 120px  ;
-      grid-template-columns: 570px 150px ;
+      grid-template-columns: 600px 150px ;
       // grid-column-gap: 0;
-      padding:0 0 0 4%;
+      padding:0 0 0 2%;
 
       &-2{
 
@@ -173,6 +170,7 @@
 
       }
       &-1{
+        padding: 0;
         padding-top: 20px;
         // border: 2px solid red;
         display: grid;
@@ -182,15 +180,17 @@
         font-weight: bold;
         font-size: 1.3em;
         letter-spacing: -2px;
+
         &1, &2{
           display: grid;
           grid-template-rows: 1fr;
-          grid-template-columns: 100px 400px;
+          grid-template-columns: 120px 400px;
 
           .hero_main-sumT, .hero_main-sum {
             position: relative;
             height: 15px;
-            width: 290px;
+            width: 300px;
+
             .form-slide{
               letter-spacing: 0;
               position:absolute;
@@ -243,32 +243,67 @@
             }
           }
 
-          .hero_main-sumT:before , .hero_main-sum:before {
+          .hero_main-sumT-before , .hero_main-sum-before {
             content: '-';
             // font-size: .3em;
-            display: block;
+            // display: block;
             position: absolute;
-            left: -5px;
-            top: -50%;
+            left: -14px;
+            top: 0%;
             text-align: center;
             border: 2px solid white;
             text-align: center;
             font-size: 1.4em;
-            width: 10px;
+            width: 20px;
             height: 20px;
-            padding-bottom: 3%;
+            // padding-bottom: 3%;
             cursor: pointer;
+
+            .minus{
+              position: absolute;
+              width: 15px;
+              height: 2px;
+              background-color: white;
+              left: 12%;
+              top: 9px;
+            }
+
+
 
           }
 
-          .hero_main-sumT:after , .hero_main-sum:after {
-            content: '+';
-            display: block;
+          .hero_main-sumT-after , .hero_main-sum-after {
+            // content: '+';
+            // display: block;
+            width: 20px;
+            height: 20px;
             position: absolute;
-            left: 141.5%;
-            top: -32%;
+            left: 138%;
+            top: -5%;
             border: 2px solid white;
             cursor: pointer;
+
+            .plus{
+                &-vert{
+                  position: absolute;
+                  width: 15px;
+                  height: 2px;
+                  left:12%;
+                  top: 9px;
+                  background-color: white;
+                }
+
+                &-horiz{
+                  position: absolute;
+                  width: 15px;
+                  height: 2px;
+                  left: 12%;
+                  top: 9px;
+                  transform: rotate(90deg);
+                  background-color: white;
+                }
+
+            }
 
           }
 

@@ -86,7 +86,7 @@ const gulp = require('gulp');
 	});
 
 	gulp.task('default', gulp.series(
-	'clean',
+		'clean',
 	gulp.parallel('templates:compile', 'styles:compile', 'sprite', 'copy'),
 	gulp.parallel('watch', 'server')
 	)
