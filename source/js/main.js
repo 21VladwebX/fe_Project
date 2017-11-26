@@ -51,11 +51,11 @@ $(document).ready(function(){
     if(who =="sum"){
       let width = 9;
       let res = value/width;
-      $('.slider-sumT').animate({"left": res + "px"},"slow");
+      $('.slider-sumT').animate({"left": res + "px"},200);
     }else if(who =="date"){
       let width = 12.7;
       let res = value*width;
-      $('.slider-date').animate({"left": res + "px"},"slow");
+      $('.slider-date').animate({"left": res + "px"},200);
     }
 
   }
@@ -84,17 +84,21 @@ $(document).ready(function(){
 
   }
 
+  var inputMainSum = $('.hero_main-sum > input').val();
   $('.hero_main-sum > input').on('change',function(){
     let value = $(this).val();
-    $(this).prop('Counter',41).animate({
+    $(this).prop('Counter',inputMainSum).animate({
           Counter: $(this).val()
       }, {
-          duration: 500,
+          duration: 200,
           easing: 'swing',
+          delay: 0,
           step: function (now) {
+            console.log(`now the value of variable now is ${now}`);
               $(this).val(now);
           }
       });
+    inputMainSum = $(this).val();
     $('.hero_main-sumC').val(value);
     $('.slider-sumT').text(value);
     $('.res-resCred').text(value);
@@ -147,20 +151,23 @@ $(document).ready(function(){
     const a = $(this).val();
     console.log(a);
   });
+
+  var inputSumT = $('.hero_main-sumT > input').val();
   $('.hero_main-sumT > input').on('change',function(){
     let value = $(this).val();
-    var oldVal = 20;
+    // var oldVal = inputSumT;
     // console.log(`value ${value}`);
-    $(this).prop('Counter',4).animate({
+    console.log(`1nputSumT is ${inputSumT} `);
+    $(this).prop('Val',inputSumT).animate({
           Counter: $(this).val()
       }, {
-          duration: 500,
+          duration:   200,
           easing: 'swing',
           step: function (now) {
-              // console.log(now);
               $(this).val(now);
           }
       });
+    inputSumT = $(this).val();
     $('.hero_main-date').val(value);
     let proc = (value/10).toFixed(2);
     $('.slider-date').text(value);
