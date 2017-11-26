@@ -1,12 +1,18 @@
 "use strict"
 $(document).ready(function(){
-
+  let date = new Date();
+  let dates = date.getDate();
+  console.log(`day ${dates}`);
   (function(){
-    let date = new Date();
+
     let month = date.getMonth();
-    let year = date.getYear();
-    let dates = date.getDate();
-    let day = date.getDay();
+    let year = date.getFullYear();
+    var day = date.getDay();
+
+    // var dates = $("")
+    // if(!dates){
+    //   dates = date.getDate();
+    // }
     var dayDescribe;
     switch (day) {
       case 0:
@@ -147,16 +153,17 @@ $(document).ready(function(){
 
   });
 
-  $('.hero_main-sumT > input').on('mousedown',function(){
-    const a = $(this).val();
-    console.log(a);
-  });
+  // $('.hero_main-sumT > input').on('mousedown',function(){
+  //   const a = $(this).val();
+  //   console.log(a);
+  // });
+  $('.hero_main-sumT > input').val(dates);
+  $('.hero_main-sumT > input').trigger('change');
 
   var inputSumT = $('.hero_main-sumT > input').val();
+
   $('.hero_main-sumT > input').on('change',function(){
     let value = $(this).val();
-    // var oldVal = inputSumT;
-    // console.log(`value ${value}`);
     console.log(`1nputSumT is ${inputSumT} `);
     $(this).prop('Val',inputSumT).animate({
           Counter: $(this).val()
