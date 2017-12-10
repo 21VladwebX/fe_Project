@@ -1,0 +1,133 @@
+.carousel__main-title {
+    grid-area: carousel__main-title;
+    justify-self: center;
+    align-self: center;
+}
+
+.slide__img {
+    grid-area: slide__img;
+    justify-self: center;
+    align-self: center;
+}
+
+.slide-content {
+    grid-area: slide-content;
+    justify-self: start;
+    align-self: start;
+}
+
+.carousel-indicators {
+    grid-area: carousel-indicators;
+    justify-self: center;
+    align-self: center;
+}
+
+.slide {
+    display: none;
+}
+
+.slide_previous, .slide_active {
+    display: grid;
+    grid-area: slide;
+    grid-template-rows: auto;
+    grid-template-columns: 2fr 3fr;
+    grid-template-areas:
+    "slide__img slide-content";
+    justify-items: center;
+}
+
+.carousel {
+    background-color: #35ad0b;
+    background-image: url('../images/carousel/carousel-bg.png');
+    background-size: cover;
+    color: #FFF;
+    display: grid;
+    font-family: arial, sans-serif;
+    grid-template-rows: 100px 250px 100px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "carousel__main-title"
+    "slide"
+    "carousel-indicators";
+    overflow: hidden;
+    width: 100%;
+}
+
+@keyframes flipPreviousSlide {
+    from { transform: translateX(0); }
+      to { transform: translateX(-100%); }
+}
+
+@keyframes flipSlide {
+    from { transform: translateX(200%); }
+      to { transform: translateX(0); }
+}
+
+.carousel__main-title {
+    text-transform: uppercase;
+    font-size: 36px;
+    padding: 0 0;
+}
+
+.slide_previous {
+    transform: translateX(-100%);
+    animation: flipPreviousSlide 1s;
+    animation-fill-mode: forwards
+}
+
+.slide_active {
+    animation: flipSlide 1s;
+    animation-fill-mode: forwards
+}
+
+.slide__img {
+    background-color: rgba(214, 216, 212, 0.01);
+    border-radius: 50%;
+    display: inline-block;
+    height: 200px;
+    width: 200px;
+}
+
+.slide-content__title {
+    font-size: 24px;
+}
+
+.slide-content__text {
+    font-size: 18px;
+}
+
+.carousel-indicators {
+    list-style-type: none;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(5, 15px);
+    grid-column-gap: 16px;
+    justify-items: center;
+    align-items: start;
+}
+
+.carousel-indicators__indicator {
+    display: inline-block;
+    border: 2px solid #cedde6;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 11px;
+    width: 11px;
+    padding: 0 0;
+}
+
+.carousel-indicators__indicator_active {
+    border-color: #22425b;
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        border: none;
+        border-radius: 50%;
+        background-color: #22425b;
+        height: 7px;
+        width: 7px;
+    }
+}
